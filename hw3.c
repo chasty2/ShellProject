@@ -192,7 +192,7 @@ void processCommand(char **commands)
     if (pid == 0)   
     {
         execv(commands[0], commands);
-        _exit(EXIT_SUCCESS);
+        _Exit(EXIT_SUCCESS);
     }
     //parent process prints status child
     else
