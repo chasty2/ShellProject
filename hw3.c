@@ -290,7 +290,11 @@ int main()
         {
             commands = processInput(input, commands, &size,
                                     &chainFlag, &pipeFlag);
-            if (chainFlag != 0)
+            if (commands == NULL)
+            {
+                continue;
+            }
+            else if (chainFlag != 0)
             {
                 processChain(commands, chainFlag, size);
             }
