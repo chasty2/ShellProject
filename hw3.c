@@ -33,7 +33,7 @@ char *shellPrompt(char *input)
 }
 
 //////////////////////////////////////////////////////////////////////////
-
+/*
 //
 //// sigint_handler: function for catching SIGINT
 //
@@ -59,7 +59,7 @@ void sigtstp_handler(int sig)
   write(1,catchMessage,sizeof(catchMessage));
   write(1,prompt,sizeof(prompt));
 }
-
+*/
 //////////////////////////////////////////////////////////////////////////
 
 
@@ -263,8 +263,8 @@ void processChain(char **commands, int chainFlag, int size)
 int main()
 {
     //signals
-    signal(SIGINT, sigint_handler);
-    signal(SIGTSTP, sigtstp_handler);
+    //signal(SIGINT, sigint_handler);
+    //signal(SIGTSTP, sigtstp_handler);
 
     // malloc space to hold user input and array of command pointers
     char *input = (char*)malloc(sizeof(char)*300);
